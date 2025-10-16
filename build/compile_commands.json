@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/scripting_entity/Desktop/projects/GVM/build",
+  "command": "/usr/sbin/c++   -std=gnu++20 -g -Wall -Wextra -O3 -s -o CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.o -c /home/scripting_entity/Desktop/projects/GVM/ByteVM/assembler/assembler.cpp",
+  "file": "/home/scripting_entity/Desktop/projects/GVM/ByteVM/assembler/assembler.cpp",
+  "output": "CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.o"
+},
+{
+  "directory": "/home/scripting_entity/Desktop/projects/GVM/build",
+  "command": "/usr/sbin/c++   -std=gnu++20 -g -Wall -Wextra -O3 -s -o CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o -c /home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp",
+  "file": "/home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp",
+  "output": "CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o"
+}
+]

@@ -1,0 +1,4 @@
+/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/assembler.dir
+/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/gvm.dir
+/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/edit_cache.dir
+/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/rebuild_cache.dir
