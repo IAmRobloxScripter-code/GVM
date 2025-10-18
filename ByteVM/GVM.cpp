@@ -133,7 +133,8 @@ int main(int argc, char *argv[])
 
     vm.dump_stack();
     while (vm.ip < remaining_size)
-    {   
+    {
+        //std::cout << static_cast<int>(bytes[vm.ip]) << std::endl;
         switch (static_cast<instructions>(bytes[vm.ip]))
         {
         case instructions::gvm_push:
@@ -253,29 +254,35 @@ int main(int argc, char *argv[])
             {
                 name += (char)bytes[vm.ip];
                 vm.ip++;
+                label->ip++;
             }
             vm.ip++;
+            label->ip++;
 
             label->param_count = (int)bytes_to_number<uint8_t>(&bytes[vm.ip]);
             vm.ip++;
+            label->ip++;
 
             uint8_t upcount = bytes_to_number<uint8_t>(&bytes[vm.ip]);
             vm.ip++;
+            label->ip++;
 
             for (uint8_t index = 0; index < upcount; ++index)
             {
                 label->upvalues.push_back(bytes_to_number<uint8_t>(&bytes[vm.ip]));
                 vm.ip++;
+                label->ip++;
             }
 
             uint64_t size = bytes_to_number<uint64_t>(&bytes[vm.ip]);
             vm.ip += 8;
+            label->ip += 8;
 
             label->program_size = size;
-            label->header_size = (vm.ip - label->ip) + (sizeof(char) + sizeof(uint64_t));
+            // label->header_size = (vm.ip - label->ip) + 2;
 
             vm.labels[name] = label;
-            vm.ip = label->ip + size - 1;
+            vm.ip = vm.ip + size;
 
             break;
         }
@@ -294,7 +301,7 @@ int main(int argc, char *argv[])
             proto->ip = vm.labels[name]->ip;
             proto->params = vm.labels[name]->param_count;
             proto->name = name;
-            proto->header_size = vm.labels[name]->header_size;
+            // proto->header_size = vm.labels[name]->header_size;
 
             for (uint8_t upvalue : vm.labels[name]->upvalues)
             {
@@ -320,13 +327,12 @@ int main(int argc, char *argv[])
         case instructions::gvm_call:
         {
             vm.ip++;
+            vm.return_position_pointers.push_back(vm.ip);
 
             object *func = vm.stack_pop();
             stack_frame *frame = new stack_frame;
             frame->last = vm.get_running_stack_frame();
             vm.stack_frames.push_back(frame);
-
-            std::cout << (int)func->func->params << std::endl;
 
             for (object *upvalue : func->func->upvalues)
             {
@@ -337,9 +343,7 @@ int main(int argc, char *argv[])
             {
                 frame->locals.push_back(vm.stack_pop());
             };
-
-            vm.return_position_pointers.push_back(vm.ip);
-            vm.ip = func->func->ip + func->func->header_size;
+            vm.ip = func->func->ip;
 
             break;
         }

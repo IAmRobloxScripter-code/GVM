@@ -288,7 +288,7 @@ void gvma_compile(program *output, std::vector<uint8_t> &stream, std::deque<std:
             std::vector<uint8_t> code;
 
             gvma_compile(output, code, node->__chunk);
-            write_bytes<uint64_t>(chunk, chunk.size() + code.size() + sizeof(uint64_t));
+            write_bytes<uint64_t>(chunk, code.size());
 
             chunk.insert(
                 chunk.end(),
