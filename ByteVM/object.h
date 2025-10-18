@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#define GC_TRIGGER_MEMORY_COUNT_MB 100
 
 enum class object_types : uint8_t
 {
@@ -15,6 +16,7 @@ struct stack_frame
 {
     std::vector<object *> locals;
     stack_frame *last = nullptr;
+    uint8_t gc_color = 2;
 };
 
 struct function
@@ -37,6 +39,7 @@ struct object
         bool boolean;
         function *func;
     };
+    uint8_t gc_color = 0; // 0 white, 1 gray, 2 black
 
     object()
     {

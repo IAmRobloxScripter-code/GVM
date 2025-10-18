@@ -19,7 +19,10 @@ struct label_proto
 class GVM
 {
 public:
-    std::vector<object *> heap;
+    std::vector<object *> heap_objects;
+    std::vector<stack_frame *> heap_stack_frames;
+    double memory_allocated = 0;
+
     std::vector<object *> stack;
     std::vector<uint64_t> return_position_pointers;
     std::vector<stack_frame *> stack_frames;
@@ -70,10 +73,119 @@ public:
     }
 };
 
+struct gc_data
+{
+    std::vector<object *> gray_objects;
+    std::vector<stack_frame *> gray_stack_frames;
+};
+
+void mark_gc_object(gc_data *gc, object *gc_object)
+{
+    gc_object->gc_color = 2;
+
+    if (gc_object->object_type == object_types::function && gc_object->func)
+    {
+        for (object *upvalue : gc_object->func->upvalues)
+        {
+            gc_object->gc_color = 1;
+            gc->gray_objects.push_back(upvalue);
+        }
+    }
+}
+
+void mark_gc_stack_frame(gc_data *gc, stack_frame *gc_object)
+{
+    gc_object->gc_color = 2;
+
+    for (object *local : gc_object->locals)
+    {
+        gc_object->gc_color = 1;
+        gc->gray_objects.push_back(local);
+    }
+}
+
+void init_garbage_collection(GVM *vm)
+{
+    gc_data *gc = new gc_data;
+
+    for (object *gc_object : vm->heap_objects)
+    {
+        gc_object->gc_color = 0;
+    }
+
+    for (stack_frame *gc_object : vm->heap_stack_frames)
+    {
+        gc_object->gc_color = 0;
+    }
+
+    for (object *gc_object : vm->stack)
+    {
+        gc_object->gc_color = 1;
+        gc->gray_objects.push_back(gc_object);
+    }
+
+    for (stack_frame *gc_object : vm->stack_frames)
+    {
+        gc_object->gc_color = 1;
+        gc->gray_stack_frames.push_back(gc_object);
+    }
+
+    while (gc->gray_objects.size() > 0)
+    {
+        object *gc_object = gc->gray_objects.back();
+        gc->gray_objects.pop_back();
+
+        mark_gc_object(gc, gc_object);
+    }
+
+    while (gc->gray_stack_frames.size() > 0)
+    {
+        stack_frame *gc_object = gc->gray_stack_frames.back();
+        gc->gray_stack_frames.pop_back();
+
+        mark_gc_stack_frame(gc, gc_object);
+    }
+
+    for (object *gc_object : vm->heap_objects)
+    {
+        if (gc_object->gc_color == 0)
+        {
+            delete gc_object;
+        }
+    }
+
+    for (stack_frame *gc_object : vm->stack_frames)
+    {
+        if (gc_object->gc_color == 0)
+        {
+            delete gc_object;
+        }
+    }
+
+    delete gc;
+}
+
+double get_size_in_mb(uint64_t bytes)
+{
+    return bytes / (1024.0 * 1024.0);
+}
+
+void add_mem_and_check_for_gc(GVM *vm, double size)
+{
+    vm->memory_allocated += get_size_in_mb(size);
+
+    if (vm->memory_allocated > GC_TRIGGER_MEMORY_COUNT_MB)
+    {
+        vm->memory_allocated = 0;
+        init_garbage_collection(vm);
+    }
+}
+
 object *make_object(object_types object_type)
 {
     object *object_value = new object{};
     object_value->object_type = object_type;
+    object_value->gc_color = 2;
 
     if (object_type == object_types::string)
         new (&object_value->string) std::string("");
@@ -134,7 +246,7 @@ int main(int argc, char *argv[])
     vm.dump_stack();
     while (vm.ip < remaining_size)
     {
-        //std::cout << static_cast<int>(bytes[vm.ip]) << std::endl;
+        // std::cout << static_cast<int>(bytes[vm.ip]) << std::endl;
         switch (static_cast<instructions>(bytes[vm.ip]))
         {
         case instructions::gvm_push:
@@ -155,6 +267,8 @@ int main(int argc, char *argv[])
                 object_value->number = value;
 
                 vm.stack.push_back(object_value);
+                vm.heap_objects.push_back(object_value);
+                add_mem_and_check_for_gc(&vm, sizeof(*object_value));
                 break;
             }
             case object_types::string:
@@ -170,7 +284,10 @@ int main(int argc, char *argv[])
 
                 object *object_value = make_object(object_types::string);
                 object_value->string = value;
+
                 vm.stack.push_back(object_value);
+                vm.heap_objects.push_back(object_value);
+                add_mem_and_check_for_gc(&vm, sizeof(*object_value));
                 break;
             }
 
@@ -181,7 +298,10 @@ int main(int argc, char *argv[])
 
                 object *object_value = make_object(object_types::boolean);
                 object_value->boolean = value;
+
                 vm.stack.push_back(object_value);
+                vm.heap_objects.push_back(object_value);
+                add_mem_and_check_for_gc(&vm, sizeof(*object_value));
                 break;
             }
             default:
@@ -201,6 +321,9 @@ int main(int argc, char *argv[])
             object_value->number = result;
 
             vm.stack.push_back(object_value);
+            vm.heap_objects.push_back(object_value);
+            add_mem_and_check_for_gc(&vm, sizeof(*object_value));
+
             vm.ip++;
             break;
         }
@@ -217,7 +340,6 @@ int main(int argc, char *argv[])
                 frame->locals.resize(id + 1);
             }
             frame->locals[id] = value;
-
             break;
         }
         case instructions::gvm_load:
@@ -312,6 +434,9 @@ int main(int argc, char *argv[])
             object_value->func = proto;
 
             vm.stack.push_back(object_value);
+            vm.heap_objects.push_back(object_value);
+
+            add_mem_and_check_for_gc(&vm, sizeof(*object_value));
             break;
         }
         case instructions::gvm_ret:
@@ -332,7 +457,10 @@ int main(int argc, char *argv[])
             object *func = vm.stack_pop();
             stack_frame *frame = new stack_frame;
             frame->last = vm.get_running_stack_frame();
+
             vm.stack_frames.push_back(frame);
+            vm.heap_stack_frames.push_back(frame);
+            add_mem_and_check_for_gc(&vm, sizeof(*frame));
 
             for (object *upvalue : func->func->upvalues)
             {
