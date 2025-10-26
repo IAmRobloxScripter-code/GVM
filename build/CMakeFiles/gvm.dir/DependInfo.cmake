@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp" "CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o" "gcc" "CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o.d"
+  "/home/devvy/Projects/GVM/vm/Objects.cpp" "CMakeFiles/gvm.dir/vm/Objects.cpp.o" "gcc" "CMakeFiles/gvm.dir/vm/Objects.cpp.o.d"
+  "/home/devvy/Projects/GVM/vm/StackFrame.cpp" "CMakeFiles/gvm.dir/vm/StackFrame.cpp.o" "gcc" "CMakeFiles/gvm.dir/vm/StackFrame.cpp.o.d"
+  "/home/devvy/Projects/GVM/vm/Vm.cpp" "CMakeFiles/gvm.dir/vm/Vm.cpp.o" "gcc" "CMakeFiles/gvm.dir/vm/Vm.cpp.o.d"
+  "/home/devvy/Projects/GVM/vm/main.cpp" "CMakeFiles/gvm.dir/vm/main.cpp.o" "gcc" "CMakeFiles/gvm.dir/vm/main.cpp.o.d"
   "" "gvm" "gcc" "CMakeFiles/gvm.dir/link.d"
   )
 

@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/scripting_entity/Desktop/projects/GVM/build/cmake_install.cmake"
+		"/home/devvy/Projects/GVM/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

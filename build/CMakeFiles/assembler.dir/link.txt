@@ -1,1 +1,0 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/assembler.dir/link.d CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.o -o assembler

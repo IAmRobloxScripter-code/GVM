@@ -2,7 +2,10 @@ gvm: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
-  CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o \
+  CMakeFiles/gvm.dir/vm/main.cpp.o \
+  CMakeFiles/gvm.dir/vm/Vm.cpp.o \
+  CMakeFiles/gvm.dir/vm/Objects.cpp.o \
+  CMakeFiles/gvm.dir/vm/StackFrame.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -37,7 +40,13 @@ gvm: \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o:
+CMakeFiles/gvm.dir/vm/main.cpp.o:
+
+CMakeFiles/gvm.dir/vm/Vm.cpp.o:
+
+CMakeFiles/gvm.dir/vm/Objects.cpp.o:
+
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 
