@@ -1,4 +1,0 @@
-uint8_t = vm.ip++;m
-uint16_t = vm.ip+=2;b
-uint32_t/int/float = vm.ip+=4;
-uint64_t/double = vm.ip+=8;

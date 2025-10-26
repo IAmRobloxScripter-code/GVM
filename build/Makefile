@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/sbin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/sbin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/scripting_entity/Desktop/projects/GVM
+CMAKE_SOURCE_DIR = /home/devvy/Projects/GVM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/scripting_entity/Desktop/projects/GVM/build
+CMAKE_BINARY_DIR = /home/devvy/Projects/GVM/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/scripting_entity/Desktop/projects/GVM/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/sbin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/sbin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,16 +87,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles /home/scripting_entity/Desktop/projects/GVM/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devvy/Projects/GVM/build/CMakeFiles /home/devvy/Projects/GVM/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devvy/Projects/GVM/build/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles /home/scripting_entity/Desktop/projects/GVM/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devvy/Projects/GVM/build/CMakeFiles /home/devvy/Projects/GVM/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devvy/Projects/GVM/build/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
@@ -124,19 +124,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named assembler
-
-# Build rule for target.
-assembler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 assembler
-.PHONY : assembler
-
-# fast build rule for target.
-assembler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assembler.dir/build.make CMakeFiles/assembler.dir/build
-.PHONY : assembler/fast
-
-#=============================================================================
 # Target rules for targets named gvm
 
 # Build rule for target.
@@ -149,53 +136,101 @@ gvm/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/build
 .PHONY : gvm/fast
 
-ByteVM/GVM.o: ByteVM/GVM.cpp.o
-.PHONY : ByteVM/GVM.o
+vm/Objects.o: vm/Objects.cpp.o
+.PHONY : vm/Objects.o
 
 # target to build an object file
-ByteVM/GVM.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o
-.PHONY : ByteVM/GVM.cpp.o
+vm/Objects.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Objects.cpp.o
+.PHONY : vm/Objects.cpp.o
 
-ByteVM/GVM.i: ByteVM/GVM.cpp.i
-.PHONY : ByteVM/GVM.i
+vm/Objects.i: vm/Objects.cpp.i
+.PHONY : vm/Objects.i
 
 # target to preprocess a source file
-ByteVM/GVM.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/ByteVM/GVM.cpp.i
-.PHONY : ByteVM/GVM.cpp.i
+vm/Objects.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Objects.cpp.i
+.PHONY : vm/Objects.cpp.i
 
-ByteVM/GVM.s: ByteVM/GVM.cpp.s
-.PHONY : ByteVM/GVM.s
+vm/Objects.s: vm/Objects.cpp.s
+.PHONY : vm/Objects.s
 
 # target to generate assembly for a file
-ByteVM/GVM.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/ByteVM/GVM.cpp.s
-.PHONY : ByteVM/GVM.cpp.s
+vm/Objects.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Objects.cpp.s
+.PHONY : vm/Objects.cpp.s
 
-ByteVM/assembler/assembler.o: ByteVM/assembler/assembler.cpp.o
-.PHONY : ByteVM/assembler/assembler.o
+vm/StackFrame.o: vm/StackFrame.cpp.o
+.PHONY : vm/StackFrame.o
 
 # target to build an object file
-ByteVM/assembler/assembler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assembler.dir/build.make CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.o
-.PHONY : ByteVM/assembler/assembler.cpp.o
+vm/StackFrame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/StackFrame.cpp.o
+.PHONY : vm/StackFrame.cpp.o
 
-ByteVM/assembler/assembler.i: ByteVM/assembler/assembler.cpp.i
-.PHONY : ByteVM/assembler/assembler.i
+vm/StackFrame.i: vm/StackFrame.cpp.i
+.PHONY : vm/StackFrame.i
 
 # target to preprocess a source file
-ByteVM/assembler/assembler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assembler.dir/build.make CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.i
-.PHONY : ByteVM/assembler/assembler.cpp.i
+vm/StackFrame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/StackFrame.cpp.i
+.PHONY : vm/StackFrame.cpp.i
 
-ByteVM/assembler/assembler.s: ByteVM/assembler/assembler.cpp.s
-.PHONY : ByteVM/assembler/assembler.s
+vm/StackFrame.s: vm/StackFrame.cpp.s
+.PHONY : vm/StackFrame.s
 
 # target to generate assembly for a file
-ByteVM/assembler/assembler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/assembler.dir/build.make CMakeFiles/assembler.dir/ByteVM/assembler/assembler.cpp.s
-.PHONY : ByteVM/assembler/assembler.cpp.s
+vm/StackFrame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/StackFrame.cpp.s
+.PHONY : vm/StackFrame.cpp.s
+
+vm/Vm.o: vm/Vm.cpp.o
+.PHONY : vm/Vm.o
+
+# target to build an object file
+vm/Vm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Vm.cpp.o
+.PHONY : vm/Vm.cpp.o
+
+vm/Vm.i: vm/Vm.cpp.i
+.PHONY : vm/Vm.i
+
+# target to preprocess a source file
+vm/Vm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Vm.cpp.i
+.PHONY : vm/Vm.cpp.i
+
+vm/Vm.s: vm/Vm.cpp.s
+.PHONY : vm/Vm.s
+
+# target to generate assembly for a file
+vm/Vm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/Vm.cpp.s
+.PHONY : vm/Vm.cpp.s
+
+vm/main.o: vm/main.cpp.o
+.PHONY : vm/main.o
+
+# target to build an object file
+vm/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/main.cpp.o
+.PHONY : vm/main.cpp.o
+
+vm/main.i: vm/main.cpp.i
+.PHONY : vm/main.i
+
+# target to preprocess a source file
+vm/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/main.cpp.i
+.PHONY : vm/main.cpp.i
+
+vm/main.s: vm/main.cpp.s
+.PHONY : vm/main.s
+
+# target to generate assembly for a file
+vm/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gvm.dir/build.make CMakeFiles/gvm.dir/vm/main.cpp.s
+.PHONY : vm/main.cpp.s
 
 # Help Target
 help:
@@ -206,14 +241,19 @@ help:
 	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... assembler"
 	@echo "... gvm"
-	@echo "... ByteVM/GVM.o"
-	@echo "... ByteVM/GVM.i"
-	@echo "... ByteVM/GVM.s"
-	@echo "... ByteVM/assembler/assembler.o"
-	@echo "... ByteVM/assembler/assembler.i"
-	@echo "... ByteVM/assembler/assembler.s"
+	@echo "... vm/Objects.o"
+	@echo "... vm/Objects.i"
+	@echo "... vm/Objects.s"
+	@echo "... vm/StackFrame.o"
+	@echo "... vm/StackFrame.i"
+	@echo "... vm/StackFrame.s"
+	@echo "... vm/Vm.o"
+	@echo "... vm/Vm.i"
+	@echo "... vm/Vm.s"
+	@echo "... vm/main.o"
+	@echo "... vm/main.i"
+	@echo "... vm/main.s"
 .PHONY : help
 
 

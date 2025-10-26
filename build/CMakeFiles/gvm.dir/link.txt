@@ -1,1 +1,1 @@
-/usr/sbin/c++ -Wl,--dependency-file=CMakeFiles/gvm.dir/link.d CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o -o gvm
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/gvm.dir/link.d CMakeFiles/gvm.dir/vm/main.cpp.o CMakeFiles/gvm.dir/vm/Vm.cpp.o CMakeFiles/gvm.dir/vm/Objects.cpp.o CMakeFiles/gvm.dir/vm/StackFrame.cpp.o -o gvm

@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/sbin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/sbin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/scripting_entity/Desktop/projects/GVM
+CMAKE_SOURCE_DIR = /home/devvy/Projects/GVM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/scripting_entity/Desktop/projects/GVM/build
+CMAKE_BINARY_DIR = /home/devvy/Projects/GVM/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gvm.dir/depend.make
@@ -72,32 +72,80 @@ include CMakeFiles/gvm.dir/flags.make
 CMakeFiles/gvm.dir/codegen:
 .PHONY : CMakeFiles/gvm.dir/codegen
 
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o: CMakeFiles/gvm.dir/flags.make
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o: /home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o: CMakeFiles/gvm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o -MF CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o.d -o CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o -c /home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp
+CMakeFiles/gvm.dir/vm/main.cpp.o: CMakeFiles/gvm.dir/flags.make
+CMakeFiles/gvm.dir/vm/main.cpp.o: /home/devvy/Projects/GVM/vm/main.cpp
+CMakeFiles/gvm.dir/vm/main.cpp.o: CMakeFiles/gvm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devvy/Projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gvm.dir/vm/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gvm.dir/vm/main.cpp.o -MF CMakeFiles/gvm.dir/vm/main.cpp.o.d -o CMakeFiles/gvm.dir/vm/main.cpp.o -c /home/devvy/Projects/GVM/vm/main.cpp
 
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gvm.dir/ByteVM/GVM.cpp.i"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp > CMakeFiles/gvm.dir/ByteVM/GVM.cpp.i
+CMakeFiles/gvm.dir/vm/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gvm.dir/vm/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devvy/Projects/GVM/vm/main.cpp > CMakeFiles/gvm.dir/vm/main.cpp.i
 
-CMakeFiles/gvm.dir/ByteVM/GVM.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gvm.dir/ByteVM/GVM.cpp.s"
-	/usr/sbin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/scripting_entity/Desktop/projects/GVM/ByteVM/GVM.cpp -o CMakeFiles/gvm.dir/ByteVM/GVM.cpp.s
+CMakeFiles/gvm.dir/vm/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gvm.dir/vm/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devvy/Projects/GVM/vm/main.cpp -o CMakeFiles/gvm.dir/vm/main.cpp.s
+
+CMakeFiles/gvm.dir/vm/Vm.cpp.o: CMakeFiles/gvm.dir/flags.make
+CMakeFiles/gvm.dir/vm/Vm.cpp.o: /home/devvy/Projects/GVM/vm/Vm.cpp
+CMakeFiles/gvm.dir/vm/Vm.cpp.o: CMakeFiles/gvm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devvy/Projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gvm.dir/vm/Vm.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gvm.dir/vm/Vm.cpp.o -MF CMakeFiles/gvm.dir/vm/Vm.cpp.o.d -o CMakeFiles/gvm.dir/vm/Vm.cpp.o -c /home/devvy/Projects/GVM/vm/Vm.cpp
+
+CMakeFiles/gvm.dir/vm/Vm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gvm.dir/vm/Vm.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devvy/Projects/GVM/vm/Vm.cpp > CMakeFiles/gvm.dir/vm/Vm.cpp.i
+
+CMakeFiles/gvm.dir/vm/Vm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gvm.dir/vm/Vm.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devvy/Projects/GVM/vm/Vm.cpp -o CMakeFiles/gvm.dir/vm/Vm.cpp.s
+
+CMakeFiles/gvm.dir/vm/Objects.cpp.o: CMakeFiles/gvm.dir/flags.make
+CMakeFiles/gvm.dir/vm/Objects.cpp.o: /home/devvy/Projects/GVM/vm/Objects.cpp
+CMakeFiles/gvm.dir/vm/Objects.cpp.o: CMakeFiles/gvm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devvy/Projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gvm.dir/vm/Objects.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gvm.dir/vm/Objects.cpp.o -MF CMakeFiles/gvm.dir/vm/Objects.cpp.o.d -o CMakeFiles/gvm.dir/vm/Objects.cpp.o -c /home/devvy/Projects/GVM/vm/Objects.cpp
+
+CMakeFiles/gvm.dir/vm/Objects.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gvm.dir/vm/Objects.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devvy/Projects/GVM/vm/Objects.cpp > CMakeFiles/gvm.dir/vm/Objects.cpp.i
+
+CMakeFiles/gvm.dir/vm/Objects.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gvm.dir/vm/Objects.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devvy/Projects/GVM/vm/Objects.cpp -o CMakeFiles/gvm.dir/vm/Objects.cpp.s
+
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.o: CMakeFiles/gvm.dir/flags.make
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.o: /home/devvy/Projects/GVM/vm/StackFrame.cpp
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.o: CMakeFiles/gvm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devvy/Projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/gvm.dir/vm/StackFrame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gvm.dir/vm/StackFrame.cpp.o -MF CMakeFiles/gvm.dir/vm/StackFrame.cpp.o.d -o CMakeFiles/gvm.dir/vm/StackFrame.cpp.o -c /home/devvy/Projects/GVM/vm/StackFrame.cpp
+
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gvm.dir/vm/StackFrame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devvy/Projects/GVM/vm/StackFrame.cpp > CMakeFiles/gvm.dir/vm/StackFrame.cpp.i
+
+CMakeFiles/gvm.dir/vm/StackFrame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gvm.dir/vm/StackFrame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devvy/Projects/GVM/vm/StackFrame.cpp -o CMakeFiles/gvm.dir/vm/StackFrame.cpp.s
 
 # Object files for target gvm
 gvm_OBJECTS = \
-"CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o"
+"CMakeFiles/gvm.dir/vm/main.cpp.o" \
+"CMakeFiles/gvm.dir/vm/Vm.cpp.o" \
+"CMakeFiles/gvm.dir/vm/Objects.cpp.o" \
+"CMakeFiles/gvm.dir/vm/StackFrame.cpp.o"
 
 # External object files for target gvm
 gvm_EXTERNAL_OBJECTS =
 
-gvm: CMakeFiles/gvm.dir/ByteVM/GVM.cpp.o
+gvm: CMakeFiles/gvm.dir/vm/main.cpp.o
+gvm: CMakeFiles/gvm.dir/vm/Vm.cpp.o
+gvm: CMakeFiles/gvm.dir/vm/Objects.cpp.o
+gvm: CMakeFiles/gvm.dir/vm/StackFrame.cpp.o
 gvm: CMakeFiles/gvm.dir/build.make
 gvm: CMakeFiles/gvm.dir/compiler_depend.ts
 gvm: CMakeFiles/gvm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable gvm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/devvy/Projects/GVM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable gvm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gvm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +157,6 @@ CMakeFiles/gvm.dir/clean:
 .PHONY : CMakeFiles/gvm.dir/clean
 
 CMakeFiles/gvm.dir/depend:
-	cd /home/scripting_entity/Desktop/projects/GVM/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/scripting_entity/Desktop/projects/GVM /home/scripting_entity/Desktop/projects/GVM /home/scripting_entity/Desktop/projects/GVM/build /home/scripting_entity/Desktop/projects/GVM/build /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/gvm.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/devvy/Projects/GVM/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/devvy/Projects/GVM /home/devvy/Projects/GVM /home/devvy/Projects/GVM/build /home/devvy/Projects/GVM/build /home/devvy/Projects/GVM/build/CMakeFiles/gvm.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/gvm.dir/depend
 

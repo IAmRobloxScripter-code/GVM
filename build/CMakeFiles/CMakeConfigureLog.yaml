@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -22,44 +22,48 @@ events:
     candidate_directories:
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/sbin/"
       - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+      - "/bin/"
     searched_directories:
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
-    found: "/usr/sbin/uname"
+    found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     message: |
-      The system is: Linux - 6.17.1-zen1-1-zen - x86_64
+      The system is: Linux - 6.17.3-arch2-1 - x86_64
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Path to a program."
@@ -78,49 +82,52 @@ events:
     candidate_directories:
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/sbin/"
       - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
-      - "/usr/sbin/gmake"
       - "/usr/bin/gmake"
-      - "/sbin/gmake"
-      - "/bin/gmake"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gmake"
       - "/var/lib/flatpak/exports/bin/gmake"
       - "/usr/bin/site_perl/gmake"
       - "/usr/bin/vendor_perl/gmake"
       - "/usr/bin/core_perl/gmake"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gmake"
+      - "/home/devvy/.local/bin/gmake"
+      - "/home/devvy/Projects/zed/.path/gmake"
+      - "/home/devvy/Projects/Jitter/build/gmake"
       - "/usr/local/sbin/make"
       - "/usr/local/bin/make"
-    found: "/usr/sbin/make"
+    found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER"
     description: "CXX compiler"
@@ -146,32 +153,35 @@ events:
     candidate_directories:
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/sbin/"
       - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
       - "/usr/local/sbin/c++"
       - "/usr/local/bin/c++"
-    found: "/usr/sbin/c++"
+    found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
@@ -180,7 +190,7 @@ events:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -201,25 +211,28 @@ events:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/sbin/c++ 
+      Compiler: /usr/bin/c++ 
       Build flags: 
       Id flags:  
       
@@ -230,14 +243,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/4.1.2/CompilerIdCXX/a.out
+        /home/devvy/Projects/GVM/build/CMakeFiles/4.1.2/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -252,37 +265,40 @@ events:
     names:
       - "ar"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/ar"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -297,37 +313,40 @@ events:
     names:
       - "ranlib"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/ranlib"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -342,37 +361,40 @@ events:
     names:
       - "strip"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/strip"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -387,37 +409,40 @@ events:
     names:
       - "ld"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/ld"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -432,37 +457,40 @@ events:
     names:
       - "nm"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/nm"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -477,37 +505,40 @@ events:
     names:
       - "objdump"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/objdump"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -522,37 +553,40 @@ events:
     names:
       - "objcopy"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/objcopy"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -567,37 +601,40 @@ events:
     names:
       - "readelf"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/readelf"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -612,49 +649,52 @@ events:
     names:
       - "dlltool"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
-      - "/usr/sbin/dlltool"
+      - "/usr/bin/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
-      - "/usr/bin/dlltool"
-      - "/sbin/dlltool"
-      - "/bin/dlltool"
+      - "/home/devvy/.local/share/flatpak/exports/bin/dlltool"
       - "/var/lib/flatpak/exports/bin/dlltool"
       - "/usr/bin/site_perl/dlltool"
       - "/usr/bin/vendor_perl/dlltool"
       - "/usr/bin/core_perl/dlltool"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/dlltool"
+      - "/home/devvy/.local/bin/dlltool"
+      - "/home/devvy/Projects/zed/.path/dlltool"
+      - "/home/devvy/Projects/Jitter/build/dlltool"
     found: false
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -669,37 +709,40 @@ events:
     names:
       - "addr2line"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
-    found: "/usr/sbin/addr2line"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
+    found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -714,49 +757,52 @@ events:
     names:
       - "tapi"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
-      - "/usr/sbin/tapi"
+      - "/usr/bin/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
-      - "/usr/bin/tapi"
-      - "/sbin/tapi"
-      - "/bin/tapi"
+      - "/home/devvy/.local/share/flatpak/exports/bin/tapi"
       - "/var/lib/flatpak/exports/bin/tapi"
       - "/usr/bin/site_perl/tapi"
       - "/usr/bin/vendor_perl/tapi"
       - "/usr/bin/core_perl/tapi"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/tapi"
+      - "/home/devvy/.local/bin/tapi"
+      - "/home/devvy/Projects/zed/.path/tapi"
+      - "/home/devvy/Projects/Jitter/build/tapi"
     found: false
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -774,71 +820,74 @@ events:
       - "gcc-ar15"
       - "gcc-ar"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
-      - "/usr/sbin/gcc-ar-15.2"
+      - "/usr/bin/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
-      - "/usr/bin/gcc-ar-15.2"
-      - "/sbin/gcc-ar-15.2"
-      - "/bin/gcc-ar-15.2"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ar-15.2"
       - "/var/lib/flatpak/exports/bin/gcc-ar-15.2"
       - "/usr/bin/site_perl/gcc-ar-15.2"
       - "/usr/bin/vendor_perl/gcc-ar-15.2"
       - "/usr/bin/core_perl/gcc-ar-15.2"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2"
-      - "/usr/sbin/gcc-ar-15"
+      - "/home/devvy/.local/bin/gcc-ar-15.2"
+      - "/home/devvy/Projects/zed/.path/gcc-ar-15.2"
+      - "/home/devvy/Projects/Jitter/build/gcc-ar-15.2"
+      - "/usr/bin/gcc-ar-15"
       - "/usr/local/sbin/gcc-ar-15"
       - "/usr/local/bin/gcc-ar-15"
-      - "/usr/bin/gcc-ar-15"
-      - "/sbin/gcc-ar-15"
-      - "/bin/gcc-ar-15"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ar-15"
       - "/var/lib/flatpak/exports/bin/gcc-ar-15"
       - "/usr/bin/site_perl/gcc-ar-15"
       - "/usr/bin/vendor_perl/gcc-ar-15"
       - "/usr/bin/core_perl/gcc-ar-15"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-15"
-      - "/usr/sbin/gcc-ar15"
+      - "/home/devvy/.local/bin/gcc-ar-15"
+      - "/home/devvy/Projects/zed/.path/gcc-ar-15"
+      - "/home/devvy/Projects/Jitter/build/gcc-ar-15"
+      - "/usr/bin/gcc-ar15"
       - "/usr/local/sbin/gcc-ar15"
       - "/usr/local/bin/gcc-ar15"
-      - "/usr/bin/gcc-ar15"
-      - "/sbin/gcc-ar15"
-      - "/bin/gcc-ar15"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ar15"
       - "/var/lib/flatpak/exports/bin/gcc-ar15"
       - "/usr/bin/site_perl/gcc-ar15"
       - "/usr/bin/vendor_perl/gcc-ar15"
       - "/usr/bin/core_perl/gcc-ar15"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar15"
-    found: "/usr/sbin/gcc-ar"
+      - "/home/devvy/.local/bin/gcc-ar15"
+      - "/home/devvy/Projects/zed/.path/gcc-ar15"
+      - "/home/devvy/Projects/Jitter/build/gcc-ar15"
+    found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -856,76 +905,79 @@ events:
       - "gcc-ranlib15"
       - "gcc-ranlib"
     candidate_directories:
-      - "/usr/sbin/"
+      - "/usr/bin/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/sbin/"
-      - "/bin/"
+      - "/home/devvy/.local/share/flatpak/exports/bin/"
       - "/var/lib/flatpak/exports/bin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/"
+      - "/home/devvy/.local/bin/"
+      - "/home/devvy/Projects/zed/.path/"
+      - "/home/devvy/Projects/Jitter/build/"
     searched_directories:
-      - "/usr/sbin/gcc-ranlib-15.2"
+      - "/usr/bin/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
-      - "/usr/bin/gcc-ranlib-15.2"
-      - "/sbin/gcc-ranlib-15.2"
-      - "/bin/gcc-ranlib-15.2"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ranlib-15.2"
       - "/var/lib/flatpak/exports/bin/gcc-ranlib-15.2"
       - "/usr/bin/site_perl/gcc-ranlib-15.2"
       - "/usr/bin/vendor_perl/gcc-ranlib-15.2"
       - "/usr/bin/core_perl/gcc-ranlib-15.2"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2"
-      - "/usr/sbin/gcc-ranlib-15"
+      - "/home/devvy/.local/bin/gcc-ranlib-15.2"
+      - "/home/devvy/Projects/zed/.path/gcc-ranlib-15.2"
+      - "/home/devvy/Projects/Jitter/build/gcc-ranlib-15.2"
+      - "/usr/bin/gcc-ranlib-15"
       - "/usr/local/sbin/gcc-ranlib-15"
       - "/usr/local/bin/gcc-ranlib-15"
-      - "/usr/bin/gcc-ranlib-15"
-      - "/sbin/gcc-ranlib-15"
-      - "/bin/gcc-ranlib-15"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ranlib-15"
       - "/var/lib/flatpak/exports/bin/gcc-ranlib-15"
       - "/usr/bin/site_perl/gcc-ranlib-15"
       - "/usr/bin/vendor_perl/gcc-ranlib-15"
       - "/usr/bin/core_perl/gcc-ranlib-15"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15"
-      - "/usr/sbin/gcc-ranlib15"
+      - "/home/devvy/.local/bin/gcc-ranlib-15"
+      - "/home/devvy/Projects/zed/.path/gcc-ranlib-15"
+      - "/home/devvy/Projects/Jitter/build/gcc-ranlib-15"
+      - "/usr/bin/gcc-ranlib15"
       - "/usr/local/sbin/gcc-ranlib15"
       - "/usr/local/bin/gcc-ranlib15"
-      - "/usr/bin/gcc-ranlib15"
-      - "/sbin/gcc-ranlib15"
-      - "/bin/gcc-ranlib15"
+      - "/home/devvy/.local/share/flatpak/exports/bin/gcc-ranlib15"
       - "/var/lib/flatpak/exports/bin/gcc-ranlib15"
       - "/usr/bin/site_perl/gcc-ranlib15"
       - "/usr/bin/vendor_perl/gcc-ranlib15"
       - "/usr/bin/core_perl/gcc-ranlib15"
-      - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib15"
-    found: "/usr/sbin/gcc-ranlib"
+      - "/home/devvy/.local/bin/gcc-ranlib15"
+      - "/home/devvy/Projects/zed/.path/gcc-ranlib15"
+      - "/home/devvy/Projects/Jitter/build/gcc-ranlib15"
+    found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
         - "/usr/local/sbin"
         - "/usr/local/bin"
-        - "/usr/sbin"
         - "/usr/bin"
-        - "/sbin"
-        - "/bin"
+        - "/home/devvy/.local/share/flatpak/exports/bin"
         - "/var/lib/flatpak/exports/bin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/scripting_entity/.vscode/extensions/ms-python.debugpy-2025.14.0-linux-x64/bundled/scripts/noConfigScripts"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
+        - "/home/devvy/.local/bin"
+        - "/home/devvy/Projects/zed/.path"
+        - "/home/devvy/Projects/Jitter/build"
   -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ"
-      binary: "/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ"
+      source: "/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0"
+      binary: "/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -935,22 +987,22 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ'
+        Change Dir: '/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0'
         
-        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_1ec90/fast
-        /usr/sbin/make  -f CMakeFiles/cmTC_1ec90.dir/build.make CMakeFiles/cmTC_1ec90.dir/build
-        make[1]: Entering directory '/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ'
-        Building CXX object CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/sbin/c++   -v -o CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0ce8d/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_0ce8d.dir/build.make CMakeFiles/cmTC_0ce8d.dir/build
+        make[1]: Entering directory '/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0'
+        Building CXX object CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
-        COLLECT_GCC=/usr/sbin/c++
+        COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
         Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust,cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20250813 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1ec90.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc4BlmBi.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ce8d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccVTggAJ.s
         GNU C++17 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20250813, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -967,16 +1019,16 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 452a313327dacf71986995db29f6855a
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/'
-         as -v --64 -o CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc4BlmBi.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVTggAJ.s
         GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_1ec90
-        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_1ec90.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_0ce8d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ce8d.dir/link.txt --verbose=1
         Using built-in specs.
-        COLLECT_GCC=/usr/sbin/c++
+        COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
         Target: x86_64-pc-linux-gnu
         Configured with: /build/gcc/src/gcc/configure --enable-languages=ada,c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust,cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror
@@ -985,14 +1037,14 @@ events:
         gcc version 15.2.1 20250813 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ec90' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1ec90.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn1ShZO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_1ec90 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0ce8d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0ce8d.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJwQzen.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0ce8d /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20250813
-        /usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn1ShZO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_1ec90 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJwQzen.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0ce8d /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.45.0
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ec90' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1ec90.'
-        /usr/sbin/c++ -v -Wl,-v CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1ec90
-        make[1]: Leaving directory '/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0ce8d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0ce8d.'
+        /usr/bin/c++ -v -Wl,-v CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0ce8d
+        make[1]: Leaving directory '/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0'
         
       exitCode: 0
   -
@@ -1000,7 +1052,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -1028,27 +1080,27 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ']
+        ignore line: [Change Dir: '/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_1ec90/fast]
-        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_1ec90.dir/build.make CMakeFiles/cmTC_1ec90.dir/build]
-        ignore line: [make[1]: Entering directory '/home/scripting_entity/Desktop/projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-QaLAqQ']
-        ignore line: [Building CXX object CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/sbin/c++   -v -o CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0ce8d/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_0ce8d.dir/build.make CMakeFiles/cmTC_0ce8d.dir/build]
+        ignore line: [make[1]: Entering directory '/home/devvy/Projects/GVM/build/CMakeFiles/CMakeScratch/TryCompile-nlYOX0']
+        ignore line: [Building CXX object CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/sbin/c++]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto m2 objc obj-c++ rust cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1ec90.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cc4BlmBi.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0ce8d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccVTggAJ.s]
         ignore line: [GNU C++17 (GCC) version 15.2.1 20250813 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20250813  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1065,16 +1117,16 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 452a313327dacf71986995db29f6855a]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc4BlmBi.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVTggAJ.s]
         ignore line: [GNU assembler version 2.45.0 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.45.0]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_1ec90]
-        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_1ec90.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_0ce8d]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ce8d.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/sbin/c++]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
         ignore line: [Target: x86_64-pc-linux-gnu]
         ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=ada c c++ d fortran go lto m2 objc obj-c++ rust cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://gitlab.archlinux.org/archlinux/packaging/packages/gcc/-/issues --with-build-config=bootstrap-lto --with-linker-hash-style=gnu --with-system-zlib --enable-__cxa_atexit --enable-cet=auto --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-link-serialization=1 --enable-linker-build-id --enable-lto --enable-multilib --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-werror]
@@ -1083,13 +1135,13 @@ events:
         ignore line: [gcc version 15.2.1 20250813 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1ec90' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1ec90.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn1ShZO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_1ec90 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0ce8d' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0ce8d.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJwQzen.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0ce8d /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccn1ShZO.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccJwQzen.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1104,7 +1156,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1ec90] ==> ignore
+          arg [cmTC_0ce8d] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -1116,7 +1168,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1127,8 +1179,8 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20250813]
-        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn1ShZO.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_1ec90 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1ec90.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
-        linker tool for 'CXX': /usr/sbin/ld
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJwQzen.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_0ce8d /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_0ce8d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
@@ -1151,8 +1203,8 @@ events:
       - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:4 (project)"
+      - "CMakeLists.txt:5 (project)"
     message: |
-      Running the CXX compiler's linker: "/usr/sbin/ld" "-v"
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils) 2.45.0
 ...
