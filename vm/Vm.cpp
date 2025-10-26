@@ -109,8 +109,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::ADD:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->add(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " + " << Operand2->Kind << "\n";
@@ -121,8 +121,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_EQ:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_eq(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " == " << Operand2->Kind << "\n";
@@ -133,8 +133,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_NE:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_ne(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " != " << Operand2->Kind << "\n";
@@ -145,8 +145,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_LT:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_lt(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " < " << Operand2->Kind << "\n";
@@ -157,8 +157,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_LTE:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_lte(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " <= " << Operand2->Kind << "\n";
@@ -169,8 +169,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_MT:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_mt(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " > " << Operand2->Kind << "\n";
@@ -181,8 +181,8 @@ void Vm::Execute(){
 				break;
 			}
 			case Instruction::CMP_MTE:{
-				Object* Operand1 = this->pop();
-				Object* Operand2 = this->pop();				
+				Object* Operand2 = this->pop();
+				Object* Operand1 = this->pop();				
 				Object* Result = Operand1->cmp_mte(Operand2);
 				if(Result == nullptr){
 					std::cerr << "Vm: No overload for " << Operand1->Kind << " >= " << Operand2->Kind << "\n";

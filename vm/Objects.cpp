@@ -44,47 +44,42 @@ void NumberObj::mark(){
 
 Object* NumberObj::add(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		return new NumberObj(static_cast<NumberObj*>(other)->Value + this->Value);
+		return new NumberObj(this->Value + static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* NumberObj::cmp_eq(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value == this->Value);
+		return new BoolObj(this->Value == static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* NumberObj::cmp_ne(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value != this->Value);
+		return new BoolObj(this->Value != static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* NumberObj::cmp_lt(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value < this->Value);
+		return new BoolObj(this->Value < static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* NumberObj::cmp_lte(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value <= this->Value);
+		return new BoolObj(this->Value <= static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* NumberObj::cmp_mt(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value > this->Value);
+		return new BoolObj(this->Value > static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -92,8 +87,7 @@ Object* NumberObj::cmp_mt(Object* other){
 
 Object* NumberObj::cmp_mte(Object* other){
 	if(other->Kind == ObjKind::NUMBER){
-		
-		return new BoolObj(static_cast<NumberObj*>(other)->Value >= this->Value);
+		return new BoolObj(this->Value >= static_cast<NumberObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -120,7 +114,7 @@ void BoolObj::mark(){
 Object* BoolObj::cmp_eq(Object* other){
 	if(other->Kind == ObjKind::BOOL){
 		
-		return new BoolObj(static_cast<BoolObj*>(other)->Value == this->Value);
+		return new BoolObj(this->Value == static_cast<BoolObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -128,7 +122,7 @@ Object* BoolObj::cmp_eq(Object* other){
 Object* BoolObj::cmp_ne(Object* other){
 	if(other->Kind == ObjKind::BOOL){
 		
-		return new BoolObj(static_cast<BoolObj*>(other)->Value != this->Value);
+		return new BoolObj(this->Value != static_cast<BoolObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -158,7 +152,7 @@ void StrObj::mark(){
 Object* StrObj::add(Object* other){
 	if(other->Kind == ObjKind::STRING){
 		
-		return new StrObj(static_cast<StrObj*>(other)->Value + this->Value);
+		return new StrObj(this->Value + static_cast<StrObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -166,15 +160,14 @@ Object* StrObj::add(Object* other){
 Object* StrObj::cmp_eq(Object* other){
 	if(other->Kind == ObjKind::STRING){
 		
-		return new BoolObj(static_cast<StrObj*>(other)->Value == this->Value);
+		return new BoolObj(this->Value == static_cast<StrObj*>(other)->Value);
 	}
 	return nullptr;
 }
 
 Object* StrObj::cmp_ne(Object* other){
 	if(other->Kind == ObjKind::STRING){
-		
-		return new BoolObj(static_cast<StrObj*>(other)->Value != this->Value);
+		return new BoolObj(this->Value != static_cast<StrObj*>(other)->Value);
 	}
 	return nullptr;
 }
@@ -186,7 +179,6 @@ Object* StrObj::cmp_lt(Object* other){return nullptr;};
 Object* StrObj::cmp_lte(Object* other){return nullptr;};
 Object* StrObj::cmp_mt(Object* other){return nullptr;};
 Object* StrObj::cmp_mte(Object* other){return nullptr;};
-
 
 std::ostream& operator<<(std::ostream& os, ObjKind Kind){
 	switch(Kind){
